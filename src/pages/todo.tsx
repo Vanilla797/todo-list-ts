@@ -20,13 +20,6 @@ const Todo = () => {
   const todoList = lists.filter((item) => !item.done);
   const doneList = lists.filter((item) => item.done);
 
-  const getListText = (id: number) => {
-    let text: string = "";
-    lists.forEach((item) => {
-      if (item.id === id) text = item.text;
-    });
-    return text;
-  };
   const onClose = () => {
     setShowModal(false);
   };
@@ -103,7 +96,7 @@ const Todo = () => {
         </Button>
       </ActionBar>
 
-      <Tabs size={"large"}>
+      <Tabs className="tabs" size={"large"}>
         <TabPane tab={<Badge status="warning" text="Todo" />} key="1">
           <List
             lists={searchFilter(todoList, searchText)}

@@ -4,7 +4,7 @@
 
 .list {
   width: 500px;
-  list-style: none;
+  list-style: outside;
 }
 
 .empty {
@@ -15,7 +15,7 @@
   display: flex;
   min-height: 3rem;
   line-height: 3rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   justify-content: space-between;
@@ -36,4 +36,7 @@
 
   cursor: pointer;
   margin-right: 15px;
+}
+.tabs {
+  width: 500px;
 }
